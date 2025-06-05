@@ -1,5 +1,7 @@
 # React Portfolio
 
+---
+
 ## About
 
 This is my personal web developer portfolio built with React and Vite. It showcases my projects, skills, and contact information in a clean, responsive single-page application designed to help me stand out to potential employers and collaborators.
