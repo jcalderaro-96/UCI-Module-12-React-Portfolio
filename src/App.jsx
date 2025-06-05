@@ -1,43 +1,31 @@
-// src/App.jsx
-
-import { useState } from 'react'                        // import useState hook
-import Header from './components/Header'                // import Header component
-import Footer from './components/Footer'                // import Footer component
-import About from './components/About'                  // import About component
-import Portfolio from './components/Portfolio'          // import Portfolio component
-import Contact from './components/Contact'              // import Contact component
-import Resume from './components/Resume'                // import Resume component
+import { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('About')   // state to track current section
+  const [currentPage, setCurrentPage] = useState('About Me'); // <-- exact string matching nav
 
-  // function to render the selected section component
-  const renderSection = () => {
-    switch (currentSection) {
-      case 'About':
-        return <About />
-      case 'Portfolio':
-        return <Portfolio />
-      case 'Contact':
-        return <Contact />
-      case 'Resume':
-        return <Resume />
-      default:
-        return <About />
+  const renderPage = () => {
+    switch(currentPage) {
+      case 'About Me': return <About />;
+      case 'Portfolio': return <Portfolio />;
+      case 'Contact': return <Contact />;
+      case 'Resume': return <Resume />;
+      default: return <About />;
     }
-  }
+  };
 
   return (
     <>
-      <Header currentSection={currentSection} setCurrentSection={setCurrentSection} />  {/* header with navigation */}
-      <main>
-        {renderSection()}                                                            {/* render selected section */}
-      </main>
-      <Footer />                                                                    {/* footer */}
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {renderPage()}
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App                                                                 // export App component
-
-// end of file
+export default App;

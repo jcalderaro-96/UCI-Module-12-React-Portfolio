@@ -1,97 +1,56 @@
-/* src/App.css */
-
-/* Basic resets and body styling */
-body {
-  margin: 0;                            /* remove default margin */
-  font-family: Arial, sans-serif;      /* set font */
-  background-color: #f4f4f9;           /* light background color */
-  color: #333;                         /* dark text for readability */
+/* Portfolio section styling */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
-/* Header styling */
-header {
-  background-color: #2a2a72;           /* dark blue background */
-  color: white;                        /* white text */
-  padding: 1rem;                      /* spacing */
-  display: flex;                      /* flex container */
-  justify-content: space-between;    /* space between items */
-  align-items: center;                /* vertical alignment */
+/* Individual project cards */
+.project-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Navigation links */
-nav button {
-  background: none;                   /* transparent background */
-  border: none;                      /* no border */
-  color: white;                      /* white text */
-  margin: 0 0.5rem;                  /* spacing */
-  cursor: pointer;                   /* pointer cursor */
-  font-size: 1rem;                   /* font size */
-  padding: 0.25rem 0.5rem;           /* padding */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-nav button:hover {
-  text-decoration: underline;        /* underline on hover */
+.project-card img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-nav button.active {
-  font-weight: bold;                  /* highlight active */
-  border-bottom: 2px solid #ff6f61; /* colored underline */
+.project-content {
+  padding: 0.8rem 1rem;
 }
 
-/* Main content area */
-main {
-  padding: 1rem;                     /* padding */
-  max-width: 800px;                  /* max width */
-  margin: 0 auto;                   /* center horizontally */
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-/* Footer styling */
-footer {
-  background-color: #2a2a72;          /* same as header */
-  color: white;                       /* white text */
-  text-align: center;                 /* center text */
-  padding: 1rem;                    /* spacing */
-  position: fixed;                   /* fixed to bottom */
-  width: 100%;                      /* full width */
-  bottom: 0;                       /* align to bottom */
+.project-links a {
+  margin-right: 1rem;
+  color: #007acc;
+  text-decoration: none;
 }
 
-/* Responsive image in projects */
-.project-image {
-  max-width: 100%;                  /* responsive width */
-  height: auto;                    /* auto height */
-  border-radius: 5px;              /* rounded corners */
+.project-links a:hover {
+  text-decoration: underline;
 }
 
-/* Contact form inputs */
-input, textarea {
-  width: 100%;                     /* full width */
-  padding: 0.5rem;                 /* padding */
-  margin-bottom: 0.5rem;           /* spacing */
-  border: 1px solid #ccc;          /* border */
-  border-radius: 3px;              /* rounded corners */
-  font-size: 1rem;                 /* font size */
-}
-
-/* Submit button */
-button[type="submit"] {
-  background-color: #ff6f61;       /* coral button */
-  color: white;                   /* white text */
-  border: none;                   /* no border */
-  padding: 0.75rem 1.5rem;        /* padding */
-  cursor: pointer;                /* pointer cursor */
-  font-size: 1rem;                /* font size */
-  border-radius: 3px;             /* rounded corners */
-}
-
-button[type="submit"]:hover {
-  background-color: #e65b50;       /* darker coral on hover */
-}
-
-/* Form error message */
-.error {
-  color: #ff6f61;                  /* coral color */
-  font-size: 0.9rem;              /* smaller font */
-  margin-top: -0.5rem;            /* pull up */
-  margin-bottom: 0.5rem;          /* spacing */
+/* Responsive tweaks */
+@media (max-width: 650px) {
+  .project-card {
+    width: 100%;
+  }
 }

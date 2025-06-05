@@ -1,64 +1,39 @@
-// src/components/Portfolio.jsx
-import Project from './Project'                                  // import Project component
+import React from 'react';
+import Project from './Project';
 
-const projects = [                                              // list of projects with info
+const projects = [
   {
     title: 'Project One',
-    image: 'https://via.placeholder.com/300x150',              // placeholder image URL
-    deployedLink: 'https://example.com/project-one',            // placeholder deployed URL
-    repoLink: 'https://github.com/yourusername/project-one',   // placeholder repo URL
+    image: 'https://via.placeholder.com/300x200',
+    deployedUrl: 'https://example.com/project-one',
+    repoUrl: 'https://github.com/username/project-one',
   },
   {
     title: 'Project Two',
-    image: 'https://via.placeholder.com/300x150',
-    deployedLink: 'https://example.com/project-two',
-    repoLink: 'https://github.com/yourusername/project-two',
+    image: 'https://via.placeholder.com/300x200',
+    deployedUrl: 'https://example.com/project-two',
+    repoUrl: 'https://github.com/username/project-two',
   },
-  {
-    title: 'Project Three',
-    image: 'https://via.placeholder.com/300x150',
-    deployedLink: 'https://example.com/project-three',
-    repoLink: 'https://github.com/yourusername/project-three',
-  },
-  {
-    title: 'Project Four',
-    image: 'https://via.placeholder.com/300x150',
-    deployedLink: 'https://example.com/project-four',
-    repoLink: 'https://github.com/yourusername/project-four',
-  },
-  {
-    title: 'Project Five',
-    image: 'https://via.placeholder.com/300x150',
-    deployedLink: 'https://example.com/project-five',
-    repoLink: 'https://github.com/yourusername/project-five',
-  },
-  {
-    title: 'Project Six',
-    image: 'https://via.placeholder.com/300x150',
-    deployedLink: 'https://example.com/project-six',
-    repoLink: 'https://github.com/yourusername/project-six',
-  },
-]
+  // Add 4 more projects here
+];
 
-function Portfolio() {
+const Portfolio = () => {
   return (
     <section>
-      <h2>Portfolio</h2>                                     {/* Section title */}
-      <div className="projects">
-        {projects.map((project) => (                         // map over projects to render Project components
+      <h2>Portfolio</h2>
+      <div className="project-grid">
+        {projects.map((project, index) => (
           <Project
-            key={project.title}                              // unique key for React
+            key={index}
             title={project.title}
             image={project.image}
-            deployedLink={project.deployedLink}
-            repoLink={project.repoLink}
+            deployedUrl={project.deployedUrl}
+            repoUrl={project.repoUrl}
           />
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio                                   // export Portfolio component
-
-// end of file
+export default Portfolio;

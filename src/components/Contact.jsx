@@ -1,114 +1,92 @@
-// src/components/Contact.jsx
-import { useState } from 'react'                            // import useState for form state
+import { useState } from "react";
 
-function Contact() {
-  const [formData, setFormData] = useState({               // track form inputs
-    name: '',
-    email: '',
-    message: '',
-  })
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
 
-  const [errors, setErrors] = useState({                    // track form errors
-    name: '',
-    email: '',
-    message: '',
-  })
+  const [errors, setErrors] = useState({});
 
-  // Simple validation function
-  function validate() {
-    const newErrors = { name: '', email: '', message: '' }
-    let isValid = true
-
+  const validate = () => {
+    const errs = {};
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required'                   // name required
-      isValid = false
+      errs.name = "Name is required.";
     }
-
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required'                 // email required
-      isValid = false
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid'                  // email format check
-      isValid = false
+      errs.email = "Email is required.";
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      errs.email = "Please enter a valid email address.";
     }
-
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required'             // message required
-      isValid = false
+      errs.message = "Message is required.";
     }
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  };
 
-    setErrors(newErrors)                                     // update errors state
-    return isValid
-  }
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" }); // clear error on change
+  };
 
-  function handleChange(e) {                                 // update form data on input change
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleBlur = (e) => {
+    validate();
+  };
 
-  function handleSubmit(e) {
-    e.preventDefault()
-    if (validate()) {                                        // only proceed if valid
-      alert('Form submitted (not really)')                  // placeholder submit action
-      setFormData({ name: '', email: '', message: '' })     // reset form
-      setErrors({ name: '', email: '', message: '' })       // reset errors
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert("Form submitted successfully (not really, no backend yet)");
+      setFormData({ name: "", email: "", message: "" });
+      setErrors({});
     }
-  }
+  };
 
   return (
     <section>
-      <h2>Contact</h2>                                      {/* Section title */}
+      <h2>Contact Me</h2>
       <form onSubmit={handleSubmit} noValidate>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name:</label><br />
           <input
             type="text"
             id="name"
             name="name"
-            value={formData.name}                            // bind input to state
-            onChange={handleChange}                          // update state on change
-            onBlur={validate}                                // validate on blur
-            required
+            value={formData.name}
+            onChange={handleChange}
+            onBlur={handleBlur}
           />
-          {errors.name && <p className="error">{errors.name}</p>}  {/* show name error */}
+          {errors.name && <p style={{ color: "green" }}>{errors.name}</p>}
         </div>
-
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email:</label><br />
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            onBlur={validate}
-            required
+            onBlur={handleBlur}
           />
-          {errors.email && <p className="error">{errors.email}</p>} {/* show email error */}
+          {errors.email && <p style={{ color: "green" }}>{errors.email}</p>}
         </div>
-
         <div>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Message:</label><br />
           <textarea
             id="message"
             name="message"
+            rows="4"
             value={formData.message}
             onChange={handleChange}
-            onBlur={validate}
-            required
+            onBlur={handleBlur}
           />
-          {errors.message && <p className="error">{errors.message}</p>} {/* show message error */}
+          {errors.message && <p style={{ color: "green" }}>{errors.message}</p>}
         </div>
-
-        <button type="submit">Send</button>                   {/* submit button */}
+        <button type="submit">Send</button>
       </form>
-
-      <p>Email: your.email@example.com</p>                    {/* fallback contact info */}
-      <p>Phone: (123) 456-7890</p>
+      <p>You can also reach me directly at: <strong>your.email@example.com</strong> or call me at <strong>(123) 456-7890</strong>.</p>
     </section>
-  )
+  );
 }
-
-export default Contact                                      // export Contact component
-
-// end of file

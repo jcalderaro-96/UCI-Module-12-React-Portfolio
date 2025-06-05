@@ -1,15 +1,13 @@
 // src/components/Header.jsx
-import Navigation from './Navigation'              // import Navigation component
+import Navigation from './Navigation';
 
-function Header({ currentSection, onNavClick }) {  // Header receives currentSection and click handler as props
+function Header({ currentPage, setCurrentPage }) {
   return (
     <header>
-      <h1>Developer Name</h1>                      {/* Developer name in header */}
-      <Navigation currentSection={currentSection} onNavClick={onNavClick} /> {/* Navigation menu */}
+      <h1>Developer Name</h1>
+      <Navigation currentSection={currentPage} onNavClick={setCurrentPage} />
     </header>
-  )
+  );
 }
 
-export default Header                              // export Header component
-
-// end of file
+export default Header;
