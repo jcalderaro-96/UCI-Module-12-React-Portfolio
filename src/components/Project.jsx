@@ -7,7 +7,7 @@ function Project({ title, image, repoUrl }) {
       <h3>{title}</h3>
       <a href={repoUrl} target="_blank" rel="noopener noreferrer">
         [GitHub Repository] - [Deployed Application]
-              </a>
+      </a>
     </div>
   );
 }

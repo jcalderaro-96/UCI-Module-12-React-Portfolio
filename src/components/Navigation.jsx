@@ -15,7 +15,7 @@ function Navigation({ currentSection, onNavClick }) {
             </button>
           </li>
         ))}
-      </ul>
+         </ul>
     </nav>
   );
 }

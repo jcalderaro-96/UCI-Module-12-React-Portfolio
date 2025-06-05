@@ -1,39 +1,39 @@
 // src/components/Portfolio.jsx
 
-import React from 'react';
-import Project from './Project';
-import dartImg from '../assets/dart.png';
+import React from "react";
+import Project from "./Project";
+import dartImg from "../assets/dart.png";
 
 const projects = [
   {
-    title: 'Project One - Dart Frog',
+    title: "Project One - Dart Frog",
     image: dartImg,
-    repoUrl: 'https://github.com/username/project-one',
+    repoUrl: "https://github.com/username/project-one",
   },
   {
-    title: 'Project Two - Dart Frog',
+    title: "Project Two - Dart Frog",
     image: dartImg,
-    repoUrl: 'https://github.com/username/project-two',
+    repoUrl: "https://github.com/username/project-two",
   },
   {
-    title: 'Project Three - Dart Frog',
+    title: "Project Three - Dart Frog",
     image: dartImg,
-    repoUrl: 'https://github.com/username/project-three',
+    repoUrl: "https://github.com/username/project-three",
   },
   {
-    title: 'Project Four - Dart Frog',
+    title: "Project Four - Dart Frog",
     image: dartImg,
-    repoUrl: 'https://github.com/username/project-four',
+    repoUrl: "https://github.com/username/project-four",
   },
   {
-    title: 'Project Five - Dart Frog',
+    title: "Project Five - Dart Frog",
     image: dartImg,
-    repoUrl: 'https://github.com/username/project-five',
+    repoUrl: "https://github.com/username/project-five",
   },
   {
-    title: 'Project Six - Dart Frog',
+    title: "Project Six - Dart Frog",
     image: dartImg,
-    repoUrl: 'https://github.com/username/project-six',
+    repoUrl: "https://github.com/username/project-six",
   },
 ];
 

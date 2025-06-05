@@ -42,7 +42,6 @@ Live Site URL: [https://stupendous-tapioca-59c0c8.netlify.app/](https://stupendo
 ---
 
 ## Technologies Used
-
 - React
 - React Router DOM
 - Vite (build tool)
@@ -62,6 +61,8 @@ cd your-repo-name
 3. Install dependencies:
 npm install
 
+---
+
 ## Usage
 - To run the app locally during development:
 npm run dev
@@ -72,39 +73,34 @@ npm run build
 To preview the production build locally:
 npm run preview
 
+---
+
 ## Deployment 
 The application is deployed live on Netlify at:
-
 https://stupendous-tapioca-59c0c8.netlify.app/
 
-Deployment is done by building the project (npm run build) and uploading the dist/ folder to Netlify Drop or connecting your GitHub repo to Netlify for automatic builds.
+To redeploy:
+- Run [npm run build]
+- Upload the [/dist] folder to Netlify
 
-## Project Structure
-
-/src
-  /assets          # Images, icons, and static assets
-  /components      # React components (Header, Navigation, Project, Footer, AboutMe, Portfolio, Contact, Resume)
-  App.jsx          # Main App component with routing
-  main.jsx         # Entry point for React
-/public            # Static files (favicon, index.html)
-dist               # Production build output (generated after build)
-package.json       # Project dependencies and scripts
-README.md          # This file
+---
 
 ## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request or open an Issue.
 
-Contributions are welcome! Please feel free to submit a Pull Request or open an Issue if you find bugs or want to suggest improvements.
+---
 
 ## Contact
-GitHub: https://github.com/yourusername
+- GitHub: https://github.com/yourusername
+- LinkedIn: https://linkedin.com/in/yourprofile
+- Email: your.email@example.com
 
-LinkedIn: https://linkedin.com/in/yourprofile
-
-Email: your.email@example.com
+---
 
 ## License
 This project is licensed under the MIT License.
 
+---
 
 ## Acknowledgements
 - Portfolio challenge requirements from UC Irvine
