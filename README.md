@@ -25,7 +25,7 @@ This is my personal web developer portfolio built with React and Vite. It showca
 
 ## Demo
 
-Live Site URL: [https://stupendous-tapioca-59c0c8.netlify.app/](https://stupendous-tapioca-59c0c8.netlify.app/)
+Live Site URL: [https://dynamic-souffle-7fb6c8.netlify.app//](https://dynamic-souffle-7fb6c8.netlify.app//)
 
 ---
 
@@ -79,7 +79,7 @@ npm run preview
 
 ## Deployment 
 The application is deployed live on Netlify at:
-https://stupendous-tapioca-59c0c8.netlify.app/
+https://dynamic-souffle-7fb6c8.netlify.app/
 
 To redeploy:
 - Run [npm run build]
