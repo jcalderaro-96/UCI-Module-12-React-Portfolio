@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* src/App.css */
+
+/* Basic resets and body styling */
+body {
+  margin: 0;                            /* remove default margin */
+  font-family: Arial, sans-serif;      /* set font */
+  background-color: #f4f4f9;           /* light background color */
+  color: #333;                         /* dark text for readability */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header styling */
+header {
+  background-color: #2a2a72;           /* dark blue background */
+  color: white;                        /* white text */
+  padding: 1rem;                      /* spacing */
+  display: flex;                      /* flex container */
+  justify-content: space-between;    /* space between items */
+  align-items: center;                /* vertical alignment */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navigation links */
+nav button {
+  background: none;                   /* transparent background */
+  border: none;                      /* no border */
+  color: white;                      /* white text */
+  margin: 0 0.5rem;                  /* spacing */
+  cursor: pointer;                   /* pointer cursor */
+  font-size: 1rem;                   /* font size */
+  padding: 0.25rem 0.5rem;           /* padding */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+nav button:hover {
+  text-decoration: underline;        /* underline on hover */
 }
 
-.card {
-  padding: 2em;
+nav button.active {
+  font-weight: bold;                  /* highlight active */
+  border-bottom: 2px solid #ff6f61; /* colored underline */
 }
 
-.read-the-docs {
-  color: #888;
+/* Main content area */
+main {
+  padding: 1rem;                     /* padding */
+  max-width: 800px;                  /* max width */
+  margin: 0 auto;                   /* center horizontally */
+}
+
+/* Footer styling */
+footer {
+  background-color: #2a2a72;          /* same as header */
+  color: white;                       /* white text */
+  text-align: center;                 /* center text */
+  padding: 1rem;                    /* spacing */
+  position: fixed;                   /* fixed to bottom */
+  width: 100%;                      /* full width */
+  bottom: 0;                       /* align to bottom */
+}
+
+/* Responsive image in projects */
+.project-image {
+  max-width: 100%;                  /* responsive width */
+  height: auto;                    /* auto height */
+  border-radius: 5px;              /* rounded corners */
+}
+
+/* Contact form inputs */
+input, textarea {
+  width: 100%;                     /* full width */
+  padding: 0.5rem;                 /* padding */
+  margin-bottom: 0.5rem;           /* spacing */
+  border: 1px solid #ccc;          /* border */
+  border-radius: 3px;              /* rounded corners */
+  font-size: 1rem;                 /* font size */
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #ff6f61;       /* coral button */
+  color: white;                   /* white text */
+  border: none;                   /* no border */
+  padding: 0.75rem 1.5rem;        /* padding */
+  cursor: pointer;                /* pointer cursor */
+  font-size: 1rem;                /* font size */
+  border-radius: 3px;             /* rounded corners */
+}
+
+button[type="submit"]:hover {
+  background-color: #e65b50;       /* darker coral on hover */
+}
+
+/* Form error message */
+.error {
+  color: #ff6f61;                  /* coral color */
+  font-size: 0.9rem;              /* smaller font */
+  margin-top: -0.5rem;            /* pull up */
+  margin-bottom: 0.5rem;          /* spacing */
 }
