@@ -1,4 +1,3 @@
-// src/components/Header.jsx
 import Navigation from './Navigation';
 
 function Header({ currentPage, setCurrentPage }) {

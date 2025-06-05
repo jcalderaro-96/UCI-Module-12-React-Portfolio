@@ -1,3 +1,5 @@
+import './App.css';
+
 import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,11 +9,11 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('About Me'); // <-- exact string matching nav
+  const [currentPage, setCurrentPage] = useState('About');
 
   const renderPage = () => {
     switch(currentPage) {
-      case 'About Me': return <About />;
+      case 'About': return <About />;
       case 'Portfolio': return <Portfolio />;
       case 'Contact': return <Contact />;
       case 'Resume': return <Resume />;
