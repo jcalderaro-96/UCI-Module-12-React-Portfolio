@@ -1,20 +1,40 @@
+// src/components/Portfolio.jsx
+
 import React from 'react';
 import Project from './Project';
+import dartImg from '../assets/dart.png';
 
 const projects = [
   {
-    title: 'Project One',
-    image: 'https://via.placeholder.com/300x200',
-    deployedUrl: 'https://example.com/project-one',
+    title: 'Project One - Dart Frog',
+    image: dartImg,
     repoUrl: 'https://github.com/username/project-one',
   },
   {
-    title: 'Project Two',
-    image: 'https://via.placeholder.com/300x200',
-    deployedUrl: 'https://example.com/project-two',
+    title: 'Project Two - Dart Frog',
+    image: dartImg,
     repoUrl: 'https://github.com/username/project-two',
   },
-  // Add 4 more projects here
+  {
+    title: 'Project Three - Dart Frog',
+    image: dartImg,
+    repoUrl: 'https://github.com/username/project-three',
+  },
+  {
+    title: 'Project Four - Dart Frog',
+    image: dartImg,
+    repoUrl: 'https://github.com/username/project-four',
+  },
+  {
+    title: 'Project Five - Dart Frog',
+    image: dartImg,
+    repoUrl: 'https://github.com/username/project-five',
+  },
+  {
+    title: 'Project Six - Dart Frog',
+    image: dartImg,
+    repoUrl: 'https://github.com/username/project-six',
+  },
 ];
 
 const Portfolio = () => {
@@ -27,7 +47,6 @@ const Portfolio = () => {
             key={index}
             title={project.title}
             image={project.image}
-            deployedUrl={project.deployedUrl}
             repoUrl={project.repoUrl}
           />
         ))}

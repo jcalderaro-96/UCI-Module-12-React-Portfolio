@@ -86,7 +86,7 @@ export default function Contact() {
         </div>
         <button type="submit">Send</button>
       </form>
-      <p>You can also reach me directly at: <strong>your.email@example.com</strong> or call me at <strong>(123) 456-7890</strong>.</p>
+      <p>You can also reach me directly at: <strong>JCalderaro96@gmail.com</strong> or call me at <strong>(123) 456-7890</strong>.</p>
     </section>
   );
 }

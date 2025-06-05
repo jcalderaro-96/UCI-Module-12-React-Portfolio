@@ -11,6 +11,28 @@ body {
   flex-direction: column;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.project-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+
 header {
   background-color: #282c34;
   color: white;
