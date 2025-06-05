@@ -1,0 +1,52 @@
+===== Captain's Log: React Portfolio Progress Summary =====
+
+1. What We've Done
+------------------
+We've successfully built a React single-page portfolio app with core components: Header, Navigation, About Me, Portfolio, Contact, Resume, and Footer. Navigation updates the content dynamically without page reloads. The Portfolio section displays multiple projects, each with titles, images, and GitHub links. The Contact form includes validation and contact info. The Resume section lists proficiencies and a downloadable resume link. Basic CSS styling is applied, making the site visually coherent and functional. We also created a “Failsafe” Git branch to preserve this stable baseline.
+
+2. Current Status
+-----------------
+The app meets the core functional requirements: dynamic routing, component reuse, and responsive layout basics. Navigation highlights the active section. The content for each section displays correctly, and links open externally. Styling is applied but could use polish and responsive enhancement. Deployment to Netlify is pending, as is adding final touches like light/dark mode toggle or advanced animations.
+
+3. What Remains
+--------------
+- Improve mobile-first responsive design and polish CSS styling for better UI/UX.
+- Add light/dark mode toggle for theme switching.
+- Deploy the completed app to Netlify and ensure the live site loads with no errors.
+- Enhance README file with screenshots, descriptions, and deployment links.
+- Final testing and validation to confirm full acceptance criteria compliance.
+- Possibly add minor animations or UI refinements (optional but recommended).
+
+===== Grading Rubric Progress =====
+
+Technical Acceptance Criteria: 🔴  (40%)
+- React SPA with Header, Navigation, Project, Footer: 🟢
+- Navigation with react-router-dom or equivalent: 🟢 (currently custom state-based routing)
+- Project component reused in Portfolio: 🟢
+- App deployed on Netlify: 🔴 (pending deployment)
+
+Deployment: 🔴  (32%)
+- Live deployed URL: 🔴
+- Loads with no errors: 🟢 (locally)
+- GitHub repo with code: 🟢
+
+Application Quality: 🟡 (15%)
+- Intuitive navigation: 🟢
+- Clean polished UI: 🟡 (basic styling done, needs polish)
+- Color scheme beyond default Bootstrap: 🟡 (partial, can improve)
+
+Repository Quality: 🟢 (13%)
+- Unique repo name: 🟢
+- Proper structure, naming, comments: 🟢
+- Multiple descriptive commits: 🟢
+- High-quality README: 🟡 (needs screenshots and deployment link)
+
+Overall Progress: ~65% Complete
+
+Time Estimate Remaining: ~2-3 hours
+- 1 hour polishing styles and responsiveness
+- 30 mins for dark mode toggle + enhancements
+- 30 mins deployment to Netlify + README finalization
+- 30 mins buffer for testing and fixes
+
+=================================================================
